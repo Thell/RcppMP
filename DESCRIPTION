@@ -1,0 +1,22 @@
+Package: RcppMP
+Type: Package
+Title: Rcpp Multi-Precision bridge.
+Version: 0.1.0
+Author: Thell Fowler
+Maintainer: Thell Fowler <thell@tbfowler.name>
+Description: Rcpp wrap/as methods for big integers, rationals, and reals.
+License: GPL (>= 3)
+LazyData: TRUE
+SystemRequirements: C++11
+Depends:
+    gmp,
+    Rmpfr
+Imports:
+    Rcpp (>= 0.12.2)
+LinkingTo:
+    Rcpp,
+    testthat
+Suggests:
+    BH,
+    testthat
+RoxygenNote: 5.0.1
