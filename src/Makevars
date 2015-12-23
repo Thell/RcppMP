@@ -1,0 +1,5 @@
+##lib linking order is important.
+
+CXX_STD = -std=c++11
+PKG_CPPFLAGS +=$(CXX_STD) -I../inst/include/
+PKG_LIBS += `$(R_HOME)/bin/Rscript -e "Rcpp:::LdFlags()"` -lmpfr -lgmpxx -lgmp

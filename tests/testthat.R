@@ -1,4 +1,4 @@
-library(testthat)
-library(RcppMP)
+require("testthat", quietly = TRUE)
 
-test_check("RcppMP")
+Sys.setenv("R_TESTS" = "")
+test_check("RcppMP", reporter = "Tap")

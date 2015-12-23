@@ -2,6 +2,9 @@
 #include <testthat.h>
 #include <Rcpp.h>
 
+//' Console access to c++ tests.
+//'
+//' @param args Single or multiple character strings.
 //' @export
 // [[Rcpp::export]]
 bool test_cpp(Rcpp::CharacterVector args = "") {

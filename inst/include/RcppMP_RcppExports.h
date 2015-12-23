@@ -4,6 +4,7 @@
 #ifndef __RcppMP_RcppExports_h__
 #define __RcppMP_RcppExports_h__
 
+#include "RcppMP_types.hpp"
 #include <Rcpp.h>
 
 namespace RcppMP {
@@ -41,6 +42,25 @@ namespace RcppMP {
         if (__result.inherits("try-error"))
             throw Rcpp::exception(as<std::string>(__result).c_str());
         return Rcpp::as<int >(__result);
+    }
+
+    inline Rcpp::List rcppmpVersions() {
+        typedef SEXP(*Ptr_rcppmpVersions)();
+        static Ptr_rcppmpVersions p_rcppmpVersions = NULL;
+        if (p_rcppmpVersions == NULL) {
+            validateSignature("Rcpp::List(*rcppmpVersions)()");
+            p_rcppmpVersions = (Ptr_rcppmpVersions)R_GetCCallable("RcppMP", "RcppMP_rcppmpVersions");
+        }
+        RObject __result;
+        {
+            RNGScope __rngScope;
+            __result = p_rcppmpVersions();
+        }
+        if (__result.inherits("interrupted-error"))
+            throw Rcpp::internal::InterruptedException();
+        if (__result.inherits("try-error"))
+            throw Rcpp::exception(as<std::string>(__result).c_str());
+        return Rcpp::as<Rcpp::List >(__result);
     }
 
 }
