@@ -25,25 +25,6 @@ namespace RcppMP {
         }
     }
 
-    inline int twoPlusTwo() {
-        typedef SEXP(*Ptr_twoPlusTwo)();
-        static Ptr_twoPlusTwo p_twoPlusTwo = NULL;
-        if (p_twoPlusTwo == NULL) {
-            validateSignature("int(*twoPlusTwo)()");
-            p_twoPlusTwo = (Ptr_twoPlusTwo)R_GetCCallable("RcppMP", "RcppMP_twoPlusTwo");
-        }
-        RObject __result;
-        {
-            RNGScope __rngScope;
-            __result = p_twoPlusTwo();
-        }
-        if (__result.inherits("interrupted-error"))
-            throw Rcpp::internal::InterruptedException();
-        if (__result.inherits("try-error"))
-            throw Rcpp::exception(as<std::string>(__result).c_str());
-        return Rcpp::as<int >(__result);
-    }
-
     inline Rcpp::List rcppmpVersions() {
         typedef SEXP(*Ptr_rcppmpVersions)();
         static Ptr_rcppmpVersions p_rcppmpVersions = NULL;

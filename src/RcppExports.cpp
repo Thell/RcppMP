@@ -9,35 +9,6 @@
 
 using namespace Rcpp;
 
-// twoPlusTwo
-int twoPlusTwo();
-static SEXP RcppMP_twoPlusTwo_try() {
-BEGIN_RCPP
-    Rcpp::RObject __result;
-    __result = Rcpp::wrap(twoPlusTwo());
-    return __result;
-END_RCPP_RETURN_ERROR
-}
-RcppExport SEXP RcppMP_twoPlusTwo() {
-    SEXP __result;
-    {
-        Rcpp::RNGScope __rngScope;
-        __result = PROTECT(RcppMP_twoPlusTwo_try());
-    }
-    Rboolean __isInterrupt = Rf_inherits(__result, "interrupted-error");
-    if (__isInterrupt) {
-        UNPROTECT(1);
-        Rf_onintr();
-    }
-    Rboolean __isError = Rf_inherits(__result, "try-error");
-    if (__isError) {
-        SEXP __msgSEXP = Rf_asChar(__result);
-        UNPROTECT(1);
-        Rf_error(CHAR(__msgSEXP));
-    }
-    UNPROTECT(1);
-    return __result;
-}
 // rcppmpVersions
 Rcpp::List rcppmpVersions();
 static SEXP RcppMP_rcppmpVersions_try() {
@@ -83,7 +54,6 @@ END_RCPP
 static int RcppMP_RcppExport_validate(const char* sig) { 
     static std::set<std::string> signatures;
     if (signatures.empty()) {
-        signatures.insert("int(*twoPlusTwo)()");
         signatures.insert("Rcpp::List(*rcppmpVersions)()");
     }
     return signatures.find(sig) != signatures.end();
@@ -91,7 +61,6 @@ static int RcppMP_RcppExport_validate(const char* sig) {
 
 // registerCCallable (register entry points for exported C++ functions)
 RcppExport SEXP RcppMP_RcppExport_registerCCallable() { 
-    R_RegisterCCallable("RcppMP", "RcppMP_twoPlusTwo", (DL_FUNC)RcppMP_twoPlusTwo_try);
     R_RegisterCCallable("RcppMP", "RcppMP_rcppmpVersions", (DL_FUNC)RcppMP_rcppmpVersions_try);
     R_RegisterCCallable("RcppMP", "RcppMP_RcppExport_validate", (DL_FUNC)RcppMP_RcppExport_validate);
     return R_NilValue;

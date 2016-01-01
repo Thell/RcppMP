@@ -17,6 +17,5 @@ LinkingTo:
     Rcpp,
     testthat
 Suggests:
-    inline,
     testthat
 RoxygenNote: 5.0.1
