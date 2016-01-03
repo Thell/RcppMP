@@ -1,4 +1,4 @@
-// forward.hpp: multi-precision mpfrc++ (mpreal) lib glue.
+// RcppMP_forward_mpreal.hpp: multi-precision mpfrc++ (mpreal) lib glue.
 //
 // Copyright (C) 2014 - 2016  Thell Fowler
 //
@@ -8,7 +8,7 @@
 #ifndef RCPPMP_FORWARD_MPREAL_HPP
 #define RCPPMP_FORWARD_MPREAL_HPP
 
-#include <mpreal.h>
+#include "RcppMP_types.hpp"
 
 namespace Rcpp {
 

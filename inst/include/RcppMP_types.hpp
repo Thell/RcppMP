@@ -10,11 +10,17 @@
 
 #include <RcppCommon.h>
 
-#include "RcppMP_forward_mpreal.hpp"
+#include <gmpxx.h>
+#include <mpfr.h>
+#include <mpreal.h>
+
+#include <RcppMP_forward_mpfr.hpp>
+#include <RcppMP_forward_mpreal.hpp>
 
 #include <Rcpp.h>
 
 // #ifdef COMPILING_RCPPMP_PACKAGE
+#include <RcppMP_mpfr.hpp>
 #include <RcppMP_mpreal.hpp>
 // #endif
 

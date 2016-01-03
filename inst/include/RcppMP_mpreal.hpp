@@ -10,8 +10,9 @@
 
 #ifndef RCPPMP_COMPILING
 
+#include "RcppMP_forward_mpreal.hpp"
+
 #include <cstdint>
-#include <mpreal.h>
 
 namespace Rcpp {
 
@@ -62,4 +63,4 @@ template <> SEXP wrap(const std::vector<mpfr::mpreal> &x) {
 
 #endif // RCPPMP_COMPILING
 
-#endif // RCPPMP_MPREAL_HPP
+#endif /* RCPPMP_MPREAL_HPP */
