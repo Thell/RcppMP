@@ -14,12 +14,14 @@
 #include <mpfr.h>
 #include <mpreal.h>
 
+#include <RcppMP_forward_gmp.hpp>
 #include <RcppMP_forward_mpfr.hpp>
 #include <RcppMP_forward_mpreal.hpp>
 
 #include <Rcpp.h>
 
 // #ifdef COMPILING_RCPPMP_PACKAGE
+#include <RcppMP_gmp.hpp>
 #include <RcppMP_mpfr.hpp>
 #include <RcppMP_mpreal.hpp>
 // #endif
