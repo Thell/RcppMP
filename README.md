@@ -1,6 +1,7 @@
 Just a few `wrap()` functions to pass from Rcpp to Rmpfr with some samples in `tests/testthat/cpp`
 
 wraps:  
+  - singular `mpz_class`
   - singular `mpfr_t`
   - singular `mpreal`
   - `std::vector<mpreal>`
