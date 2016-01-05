@@ -8,8 +8,6 @@
 #ifndef RCPPMP_GMP_HPP
 #define RCPPMP_GMP_HPP
 
-#include <gmpxx.h>
-
 namespace Rcpp {
 
 template<> SEXP wrap(const mpz_class &x) {

@@ -15,4 +15,5 @@ test_that("Wrapping of gmp class results in Rgmp class type.", {
 
 test_that("Wrapping of mpz_class matches 'as.bigz()' value.", {
   expect_identical(as.bigz_uint32(123), gmp::as.bigz(123))
+  expect_identical(as.bigz_str("123"), gmp::as.bigz("123"))
 })
