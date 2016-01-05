@@ -15,6 +15,10 @@ template<> SEXP wrap(const mpz_class &x) {
   return bigz(wrap(x.get_str()));
 }
 
+template<> SEXP wrap(const mpq_class &x) {
+  Function bigq("as.bigq", "gmp");
+  return bigq(wrap(x.get_str()));
+}
 
 } // namespace Rcpp
 

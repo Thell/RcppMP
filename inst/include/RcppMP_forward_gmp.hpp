@@ -11,6 +11,7 @@
 namespace Rcpp {
 
 template <> SEXP wrap(const mpz_class &);
+template <> SEXP wrap(const mpq_class &);
 
 } // namespace Rcpp
 
