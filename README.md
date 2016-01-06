@@ -4,6 +4,7 @@ Using `string` for `Rgmp` types and populating the `S4` object for `Rmpfr`.
 
 wraps:  
   - singular `cpp_int` to `bigz`
+  - singular `cpp_rational` to `bigq`
   - singular `mpfr_t` to `mpfr`
   - singular `mpq_class` to `bigq`
   - singular `mpreal` to `mpfr`
