@@ -1,5 +1,5 @@
 // [[Rcpp::plugins(cpp11)]]
-// [[Rcpp::depends(RcppMP)]]
+// [[Rcpp::depends(RcppMP, BH)]]
 
 #include <RcppMP.h>
 
