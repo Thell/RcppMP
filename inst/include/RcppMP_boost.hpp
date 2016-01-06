@@ -15,6 +15,11 @@ template <> SEXP wrap(const boost::multiprecision::cpp_int &x) {
   return bigz(wrap(x.str()));
 }
 
+template<> SEXP wrap(const boost::multiprecision::cpp_rational &x) {
+  Function bigq("as.bigq", "gmp");
+  return bigq(wrap(x.str()));
+}
+
 } // namespace Rcpp
 
 #endif /* RCPPMP_BOOST_HPP */
