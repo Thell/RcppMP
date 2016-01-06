@@ -3,6 +3,7 @@ Just a few `wrap()` functions to pass from Rcpp to Rmpfr with some samples in `t
 Using `string` for `Rgmp` types and populating the `S4` object for `Rmpfr`.
 
 wraps:  
+  - singular `cpp_int` to `bigz`
   - singular `mpfr_t` to `mpfr`
   - singular `mpq_class` to `bigq`
   - singular `mpreal` to `mpfr`
