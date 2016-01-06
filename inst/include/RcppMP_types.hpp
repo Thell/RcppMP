@@ -14,9 +14,15 @@
 #include <mpfr.h>
 #include <mpreal.h>
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+#include <boost/multiprecision/cpp_int.hpp>
+#pragma GCC diagnostic pop
+
 #include <RcppMP_forward_gmp.hpp>
 #include <RcppMP_forward_mpfr.hpp>
 #include <RcppMP_forward_mpreal.hpp>
+#include <RcppMP_forward_boost.hpp>
 
 #include <Rcpp.h>
 
@@ -24,6 +30,7 @@
 #include <RcppMP_gmp.hpp>
 #include <RcppMP_mpfr.hpp>
 #include <RcppMP_mpreal.hpp>
+#include <RcppMP_boost.hpp>
 // #endif
 
 #endif /* RCPPMP_TYPES_HPP */
