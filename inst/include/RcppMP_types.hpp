@@ -19,18 +19,26 @@
 #include <boost/multiprecision/cpp_int.hpp>
 #pragma GCC diagnostic pop
 
-#include <RcppMP_forward_gmp.hpp>
-#include <RcppMP_forward_mpfr.hpp>
-#include <RcppMP_forward_mpreal.hpp>
-#include <RcppMP_forward_boost.hpp>
+namespace Rcpp {
+
+// gmp
+template <> SEXP wrap(const mpq_class &);
+template <> SEXP wrap(const mpz_class &);
+// mpfr
+template <> SEXP wrap(const mpfr_t &);
+// mpreal
+template <> SEXP wrap(const mpfr::mpreal &);
+template <> SEXP wrap(const std::vector<mpfr::mpreal> &);
+// boost multiprecision
+template <> SEXP wrap(const boost::multiprecision::cpp_int &);
+
+} // namespace Rcpp
 
 #include <Rcpp.h>
 
-// #ifdef COMPILING_RCPPMP_PACKAGE
 #include <RcppMP_gmp.hpp>
 #include <RcppMP_mpfr.hpp>
 #include <RcppMP_mpreal.hpp>
 #include <RcppMP_boost.hpp>
-// #endif
 
 #endif /* RCPPMP_TYPES_HPP */

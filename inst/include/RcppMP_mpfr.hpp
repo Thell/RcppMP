@@ -8,10 +8,6 @@
 #ifndef RCPPMP_MPFR_HPP
 #define RCPPMP_MPFR_HPP
 
-#ifndef RCPPMP_COMPILING
-
-#include "RcppMP_forward_mpfr.hpp"
-
 namespace Rcpp {
 
 template <> SEXP wrap(const mpfr_t &x) {
@@ -47,8 +43,5 @@ template <> SEXP wrap(const mpfr_t &x) {
 }
 
 } // namespace rcpp
-
-
-#endif /* RCPPMP_COMPILING */
 
 #endif /* RCPPMP_MPFR_HPP */

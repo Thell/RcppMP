@@ -8,10 +8,6 @@
 #ifndef RCPPMP_MPREAL_HPP
 #define RCPPMP_MPREAL_HPP
 
-#ifndef RCPPMP_COMPILING
-
-#include "RcppMP_forward_mpreal.hpp"
-
 #include <cstdint>
 
 namespace Rcpp {
@@ -32,7 +28,5 @@ template <> SEXP wrap(const std::vector<mpfr::mpreal> &x) {
 }
 
 } // namespace Rcpp
-
-#endif // RCPPMP_COMPILING
 
 #endif /* RCPPMP_MPREAL_HPP */
