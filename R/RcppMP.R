@@ -1,5 +1,7 @@
 #' R multi-precision types for Rcpp.
 #'
+#' @description Basic Rcpp wrappers for gmp, mpfr and mpfr++ mpreal values.
+#'
 #' @references Extending Rcpp:
 #'  \url{http://cran.r-project.org/web/packages/Rcpp/vignettes/Rcpp-extending.pdf}
 #' @references The GNU Multiple Precision Arithmetic Library

@@ -5,7 +5,7 @@
 \alias{RcppMP-package}
 \title{R multi-precision types for Rcpp.}
 \description{
-R multi-precision types for Rcpp.
+Basic Rcpp wrappers for gmp, mpfr and mpfr++ mpreal values.
 }
 \references{
 Extending Rcpp:
@@ -29,4 +29,3 @@ Boost.Multiprecision
 }
 \keyword{Rcpp}
 \keyword{multi-precision}
-

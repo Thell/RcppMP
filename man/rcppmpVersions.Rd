@@ -13,4 +13,3 @@ List of named character vectors indicating the current
 \description{
 Available multi-precision library versions.
 }
-
